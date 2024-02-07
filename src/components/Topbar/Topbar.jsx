@@ -28,7 +28,7 @@ function Topbar() {
           </div>
           <div className="topbar__icon-item">
             <NotificationsIcon className="topbar__icon-logo" />
-            <span className="topbar__icon-number">2</span>
+            <span className="topbar__icon-number">2 test</span>
           </div>
         </div>
         <img
