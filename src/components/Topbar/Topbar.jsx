@@ -1,4 +1,7 @@
 import React from "react";
+import SearchIcon from "@mui/icons-material/Search";
+import ChatIcon from "@mui/icons-material/Chat";
+import NotificationsIcon from "@mui/icons-material/Notifications";
 import "./Topbar.scss";
 
 function Topbar() {
@@ -10,6 +13,7 @@ function Topbar() {
         </div>
         <div className="topbar__box-center">
           <div className="topbar__searchbar">
+            <SearchIcon className="topbar__search-icon " />
             <input
               type="text"
               className="topbar__search-input"
@@ -18,8 +22,14 @@ function Topbar() {
           </div>
         </div>
         <div className="topbar__box-right">
-          <div className="topbar__icon-item">1</div>
-          <div className="topbar__icon-item">2</div>
+          <div className="topbar__icon-item">
+            <ChatIcon className="topbar__icon-logo" />
+            <span className="topbar__icon-number">1</span>
+          </div>
+          <div className="topbar__icon-item">
+            <NotificationsIcon className="topbar__icon-logo" />
+            <span className="topbar__icon-number">2</span>
+          </div>
         </div>
         <img
           src="../../../public/assets/person/Tomoki's-profile.jpg"
