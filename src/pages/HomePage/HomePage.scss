@@ -1,0 +1,10 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+.home {
+  &__container {
+    display: flex;
+    background-color: $colour-mockFacebook-secondary-background;
+  }
+}
