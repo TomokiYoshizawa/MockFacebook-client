@@ -9,8 +9,8 @@ function HomePage() {
       <TopBar />
       <div className="home__container">
         <SideBar />
-        {/* <Timeline />
-        <RightBar /> */}
+        <Timeline />
+        <RightBar />
       </div>
     </div>
   );
