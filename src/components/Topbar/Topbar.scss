@@ -1,4 +1,33 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
+
 .topbar {
+  &__container {
+    background-color: $colour-mockFacebook-primary;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  &__box-left {
+    flex: 3;
+  }
+  &__logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-left: 32px;
+  }
+  &__box-center {
+    flex: 5;
+  }
+  &__box-right {
+    flex: 4;
+  }
   &__profile-image {
     height: 50px;
     width: 50px;
