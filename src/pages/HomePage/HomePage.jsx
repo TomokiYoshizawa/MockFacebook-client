@@ -1,10 +1,13 @@
-import React from "react";
-import Topbar from "../../components/Topbar/Topbar.jsx";
+import TopBar from "../../components/Topbar/Topbar.jsx";
+import SideBar from "../../components/SideBar/SideBar.jsx";
 
 function HomePage() {
   return (
     <div className="home">
-      <Topbar />
+      <TopBar />
+      <SideBar />
+      {/* <Timeline />
+            <Rightbar /> */}
     </div>
   );
 }
