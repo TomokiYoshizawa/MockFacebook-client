@@ -14,7 +14,7 @@ function Topbar() {
           <span className="topbar__logo">MockFacebook</span>
         </div>
         <div className="topbar__box-center">
-          <div className="topbar__searchbar">
+          <div className="topbar__box-searchbar">
             <SearchIcon className="topbar__search-icon " />
             <input
               type="text"
@@ -24,20 +24,22 @@ function Topbar() {
           </div>
         </div>
         <div className="topbar__box-right">
-          <div className="topbar__icon-item">
-            <ChatIcon className="topbar__icon-logo" />
-            <span className="topbar__icon-number">1</span>
-          </div>
-          <div className="topbar__icon-item">
-            <NotificationsIcon className="topbar__icon-logo" />
-            <span className="topbar__icon-number">2 test</span>
+          <div className="topbar__icon-box">
+            <div className="topbar__icon-item">
+              <ChatIcon className="topbar__icon-logo" />
+              <span className="topbar__icon-badge">1</span>
+            </div>
+            <div className="topbar__icon-item">
+              <NotificationsIcon className="topbar__icon-logo" />
+              <span className="topbar__icon-badge">2</span>
+            </div>
+            <img
+              src="../../../public/assets/person/Tomoki's-profile.jpg"
+              alt="profile-image"
+              className="topbar__profile-image"
+            />
           </div>
         </div>
-        <img
-          src="../../../public/assets/person/Tomoki's-profile.jpg"
-          alt="profile-image"
-          className="topbar__profile-image"
-        />
       </div>
     </div>
   );
