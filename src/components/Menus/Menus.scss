@@ -1,0 +1,38 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+.menu {
+  &__wrapper {
+    padding: 20px;
+  }
+  &__list {
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 4px 6px;
+    list-style: none;
+    box-shadow: 3px 7px 13px -7px #3f3f3f;
+    border-radius: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  &__item:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+  }
+  &__icon {
+    @include tablet {
+      font-size: 35px !important;
+      margin-right: 10px;
+    }
+  }
+  &__text {
+    font-size: 20px;
+    padding-top: 3px;
+  }
+}
