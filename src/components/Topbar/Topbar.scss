@@ -17,6 +17,7 @@
       padding: 0;
     }
   }
+
   &__box-left {
     flex: 3;
     text-align: center;
@@ -24,6 +25,7 @@
       text-align: left;
     }
   }
+
   &__logo {
     font-size: 24px;
     color: white;
@@ -31,9 +33,15 @@
     margin-left: 32px;
   }
 
+  &__link {
+    text-decoration: none;
+    color: black;
+  }
+
   &__box-center {
     flex: 5;
   }
+
   &__box-searchbar {
     width: 100%;
     height: 30px;
@@ -43,18 +51,22 @@
     border-radius: 25px;
     background-color: $colour-mockFacebook-primary-background;
   }
+
   &__search-icon {
     font-size: 20px !important;
     margin-left: 10px;
     margin-right: 5px;
   }
+
   &__search-input {
     border: none;
     width: 80%;
   }
+
   &__search-input:focus {
     outline: none;
   }
+
   &__box-right {
     flex: 4;
     display: flex;
@@ -62,15 +74,18 @@
     justify-content: space-around;
     color: $colour-mockFacebook-primary-background;
   }
+
   &__icon-box {
     display: flex;
   }
+
   &__icon-item {
     position: relative;
     margin-top: 5px;
     margin-right: 15px;
     cursor: pointer;
   }
+
   &__icon-badge {
     display: flex;
     align-items: center;

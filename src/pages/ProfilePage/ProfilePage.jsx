@@ -7,6 +7,8 @@ import RightBar from "../../components/RightBar/RightBar";
 import "./ProfilePage.scss";
 
 function ProfilePage() {
+  const PUBLIC_FOLDER = import.meta.env.VITE_APP_PUBLIC_FOLDER;
+  console.log("PUBLIC_FOLDER: ", PUBLIC_FOLDER);
   return (
     <div className="profile">
       <TopBar />
@@ -16,7 +18,9 @@ function ProfilePage() {
           <div className="profile container-right--top">
             <div className="profile__box-cover">
               <img
-                src="../../../public/assets/post/3.jpeg"
+                // src={`${PUBLIC_FOLDER}/post/3.jpeg`}
+                src={PUBLIC_FOLDER + "/post/3.jpeg"}
+                // src="../../../public/assets/post/3.jpeg"
                 alt="cover"
                 className="profile__cover-img"
               />

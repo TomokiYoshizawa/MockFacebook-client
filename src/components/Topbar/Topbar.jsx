@@ -1,6 +1,9 @@
 /* eslint-disable no-unused-vars */
 
 import React from "react";
+
+import { Link } from "react-router-dom";
+
 import SearchIcon from "@mui/icons-material/Search";
 import ChatIcon from "@mui/icons-material/Chat";
 import NotificationsIcon from "@mui/icons-material/Notifications";
@@ -11,7 +14,9 @@ function Topbar() {
     <div className="topbar">
       <div className="topbar__container">
         <div className="topbar__box-left">
-          <span className="topbar__logo">MockFacebook</span>
+          <Link to="/" className="topbar__link">
+            <span className="topbar__logo">MockFacebook</span>
+          </Link>
         </div>
         <div className="topbar__box-center">
           <div className="topbar__box-searchbar">

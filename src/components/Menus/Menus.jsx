@@ -1,4 +1,7 @@
 import Home from "@mui/icons-material/Home";
+
+import { Link } from "react-router-dom";
+
 import Search from "@mui/icons-material/Search";
 import Notification from "@mui/icons-material/Notifications";
 import MessageRounded from "@mui/icons-material/MessageRounded";
@@ -14,7 +17,9 @@ function Menus() {
         <ul className="menu__list">
           <li className="menu__item">
             <Home className="menu__icon" />
-            <span className="menu__text">Home test</span>
+            <Link to="/" className="menu__link">
+              <span className="menu__text">Home</span>
+            </Link>
           </li>
           <li className="menu__item">
             <Search className="menu__icon" />
@@ -34,7 +39,9 @@ function Menus() {
           </li>
           <li className="menu__item">
             <Person className="menu__icon" />
-            <span className="menu__text">Profile</span>
+            <Link to="/profile/username" className="menu__link">
+              <span className="menu__text">Profile</span>
+            </Link>
           </li>
           <li className="menu__item">
             <Settings className="menu__icon" />
