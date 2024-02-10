@@ -1,0 +1,90 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $colour-mockFacebook-primary-background;
+
+  &__wrapper {
+    display: flex;
+    width: 70%;
+    height: 70%;
+  }
+
+  &__left,
+  &__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 800;
+    color: $colour-mockFacebook-primary;
+  }
+
+  &__description {
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 500;
+    &-register {
+      text-align: center;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 350px;
+    padding: 20px;
+    background-color: $colour-mockFacebook-primary;
+    border-radius: 10px;
+    color: $colour-mockFacebook-primary-background;
+    box-shadow: 3px 7px 13px -7px #3f3f3f;
+    border-radius: 10px;
+  }
+
+  &__input {
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
+  &__input:focus {
+    outline: none;
+  }
+
+  &__btn {
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: $colour-mockFacebook-primary-background;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &-register {
+      width: 60%;
+      margin-top: 15px;
+      align-self: center;
+      background-color: rgb(18, 162, 18);
+      color: $colour-mockFacebook-primary-background;
+    }
+  }
+
+  &__forget {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
