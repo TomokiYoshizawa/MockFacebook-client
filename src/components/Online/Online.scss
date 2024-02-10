@@ -1,0 +1,19 @@
+.online {
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  &__profile-pic {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}

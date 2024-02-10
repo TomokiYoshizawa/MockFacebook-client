@@ -1,6 +1,7 @@
 import React from "react";
 import Share from "../Share/Share";
 import Post from "../Post/Post";
+import { Posts } from "../../dummyData";
 
 import "./Timeline.scss";
 
@@ -9,7 +10,9 @@ function Timeline() {
     <div className="timeline">
       <div className="timeline__wrapper">
         <Share />
-        <Post />
+        {Posts.map((post) => (
+          <Post post={post} key={post.id} />
+        ))}
       </div>
     </div>
   );

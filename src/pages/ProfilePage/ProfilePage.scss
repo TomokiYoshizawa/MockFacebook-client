@@ -1,0 +1,48 @@
+.profile {
+  //   display: flex;
+  &__container {
+    display: flex;
+  }
+
+  &__container-right {
+    flex: 10.5;
+  }
+
+  &__box-cover {
+    height: 320px;
+    position: relative;
+  }
+
+  &__cover-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  &__user-image {
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    right: 0;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto;
+    border: 5px solid white;
+  }
+
+  &__box-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__info-name {
+    font-size: 24px;
+  }
+
+  &__container-right--bottom {
+    display: flex;
+  }
+}
