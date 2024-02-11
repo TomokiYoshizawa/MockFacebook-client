@@ -3,7 +3,7 @@ import Online from "../Online/Online.jsx";
 import { Users } from "../../dummyData";
 import "./RightBar.scss";
 
-function RightBar({ profile }) {
+function RightBar({ user }) {
   const HomeRightbar = () => {
     return (
       <div className="rightbar">
@@ -106,7 +106,7 @@ function RightBar({ profile }) {
     );
   };
 
-  return <>{profile ? <ProfileRightbar /> : <HomeRightbar />}</>;
+  return <>{user ? <ProfileRightbar /> : <HomeRightbar />}</>;
 }
 
 export default RightBar;

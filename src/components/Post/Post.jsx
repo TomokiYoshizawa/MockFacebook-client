@@ -2,6 +2,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { format } from "timeago.js";
+import { Link } from "react-router-dom";
 
 import MoreVert from "@mui/icons-material/MoreVert";
 
@@ -12,19 +14,24 @@ import "./Post.scss";
 function Post({ post }) {
   const PUBLIC_FOLDER = import.meta.env.VITE_APP_PUBLIC_FOLDER;
   const SERVER_URL = import.meta.env.VITE_SERVER_URL;
-
-  const [like, setLike] = useState(post.like);
+  // console.log(post);
+  // console.log(SERVER_URL);
+  const [like, setLike] = useState(post.likes.length);
   const [isLiked, setIsLiked] = useState(false);
   const [user, setUser] = useState({});
 
+  // console.log(user);
+
   useEffect(() => {
     const getUser = async () => {
-      const response = await axios.get(`${SERVER_URL}/users/${post.userId}`);
+      const response = await axios.get(
+        `${SERVER_URL}/users?userId=${post.userId}`
+      );
       console.log(response);
       setUser(response.data);
     };
     getUser();
-  }, []);
+  }, [post.userId, SERVER_URL]);
 
   const handleLike = () => {
     setLike(isLiked ? like - 1 : like + 1);
@@ -35,13 +42,19 @@ function Post({ post }) {
       <div className="post__wrapper">
         <div className="post__top">
           <div className="post__top-left">
-            <img
-              src={user.profilePicture}
-              alt="profile"
-              className="post__profile-img"
-            />
+            <Link to={`/profile/${user.username}`}>
+              <img
+                src={
+                  user.profilePicture
+                    ? PUBLIC_FOLDER + `/person/${user.profilePicture}`
+                    : PUBLIC_FOLDER + "/person/noAvatar.png"
+                }
+                alt="profile"
+                className="post__profile-img"
+              />
+            </Link>
             <span className="post__username">{user.username}</span>
-            <span className="post__date">{post.date}</span>
+            <span className="post__date">{format(post.createdAt)}</span>
           </div>
           <div className="post__top-right">
             <MoreVert />
@@ -50,7 +63,7 @@ function Post({ post }) {
         <div className="post__center">
           <span className="post__text">{post.description}</span>
           <img
-            src={PUBLIC_FOLDER + post.photo}
+            src={PUBLIC_FOLDER + post.img}
             alt="post"
             className="post__img"
           />

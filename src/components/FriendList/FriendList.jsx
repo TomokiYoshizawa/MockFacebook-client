@@ -5,7 +5,7 @@ import "./FriendList.scss";
 
 function FriendList({ Users }) {
   const PUBLIC_FOLDER = import.meta.env.VITE_APP_PUBLIC_FOLDER;
-  console.log(PUBLIC_FOLDER);
+
   return (
     <div className="friend-list">
       <ul className="friend-list__list">
