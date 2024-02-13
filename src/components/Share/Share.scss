@@ -27,7 +27,10 @@
 
   &__input {
     height: 100%;
+    width: 100%;
+    min-width: 0;
     border: none;
+    box-sizing: border-box;
   }
 
   &__input:focus {

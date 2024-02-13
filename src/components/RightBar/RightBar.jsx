@@ -28,9 +28,9 @@ function RightBar({ user }) {
             alt="img"
             className="rightbar__event-img"
           />
-          <h4 className="rightbar__title">Friends</h4>
+          {/* <h4 className="rightbar__title">Friends</h4> */}
         </div>
-        <Online Users={Users} />
+        {/* <Online Users={Users} /> */}
         <p className="rightbar__promotion-title">Promotion</p>
         <img
           src={`${PUBLIC_FOLDER}/promotion/promotion1.jpeg`}

@@ -64,7 +64,7 @@ function ProfilePage() {
           </div>
           <div className="profile__container-right--bottom">
             <Timeline username={username} />
-            <RightBar user={user} />
+            {/* <RightBar user={user} /> */}
           </div>
         </div>
       </div>
