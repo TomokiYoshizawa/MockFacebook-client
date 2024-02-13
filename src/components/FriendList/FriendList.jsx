@@ -4,7 +4,7 @@ import React from "react";
 import "./FriendList.scss";
 
 function FriendList({ Users }) {
-  const PUBLIC_FOLDER = import.meta.env.VITE_APP_PUBLIC_FOLDER;
+  const PUBLIC_FOLDER = import.meta.env.VITE_SERVER_PUBLIC_FOLDER;
 
   return (
     <div className="friend-list">

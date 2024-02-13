@@ -1,8 +1,43 @@
-import React from "react";
+/* eslint-disable no-unused-vars */
+
+import { React, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./RegisterPage.scss";
+import axios from "axios";
 
 function RegisterPage() {
+  const username = useRef();
+  const email = useRef();
+  const password = useRef();
+  const passwordAgain = useRef();
+
+  const navigate = useNavigate();
+
+  const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    //confirm password matching
+    if (password.current.value !== passwordAgain.current.value) {
+      passwordAgain.current.setCustomValidity("Passwords don't match!");
+    } else {
+      try {
+        //register user if password matches
+        const user = {
+          username: username.current.value,
+          email: email.current.value,
+          password: password.current.value,
+        };
+        await axios.post(`${SERVER_URL}/auth/register`, user);
+        navigate("/login");
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  };
+
   return (
     <div className="register">
       <div className="register__wrapper">
@@ -13,7 +48,7 @@ function RegisterPage() {
           </span>
         </div>
         <div className="register__right">
-          <div className="register__box">
+          <form className="register__box" onSubmit={handleSubmit}>
             <h4 className="register__description register__description-register">
               Register Here
             </h4>
@@ -21,27 +56,39 @@ function RegisterPage() {
               type="text"
               className="register__input"
               placeholder="User name"
+              required
+              ref={username}
+            />
+            <input
+              type="email"
+              className="register__input"
+              placeholder="E-mail"
+              required
+              ref={email}
             />
             <input
               type="text"
               className="register__input"
-              placeholder="E-mail"
-            />{" "}
-            <input
-              type="text"
-              className="register__input"
               placeholder="Password"
+              minLength="6"
+              required
+              ref={password}
             />
             <input
               type="text"
               className="register__input"
               placeholder="Confirmed Password"
+              minLength="6"
+              required
+              ref={passwordAgain}
             />
-            <button className="register__btn">Sign Up</button>
+            <button type="submit" className="register__btn">
+              Sign Up
+            </button>
             <button className="register__btn register__btn-register">
               Login
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>

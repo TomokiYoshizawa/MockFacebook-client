@@ -1,16 +1,21 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from "react";
-import Online from "../Online/Online.jsx";
 import { Users } from "../../dummyData";
+import Online from "../Online/Online.jsx";
+
 import "./RightBar.scss";
 
 function RightBar({ user }) {
+  const PUBLIC_FOLDER = import.meta.env.VITE_SERVER_PUBLIC_FOLDER;
+
   const HomeRightbar = () => {
     return (
       <div className="rightbar">
         <div className="rightbar__wrapper">
           <div className="rightbar__event-container">
             <img
-              src="../../../public/assets/logos/star.png"
+              src={`${PUBLIC_FOLDER}/logos/star.png`}
               alt="img"
               className="rightbar__event-logo"
             />
@@ -19,7 +24,7 @@ function RightBar({ user }) {
             </span>
           </div>
           <img
-            src="../../../public/assets/ad.jpeg"
+            src={`${PUBLIC_FOLDER}/ad.jpeg`}
             alt="img"
             className="rightbar__event-img"
           />
@@ -28,19 +33,19 @@ function RightBar({ user }) {
         <Online Users={Users} />
         <p className="rightbar__promotion-title">Promotion</p>
         <img
-          src="../../../public/assets/promotion/promotion1.jpeg"
+          src={`${PUBLIC_FOLDER}/promotion/promotion1.jpeg`}
           alt="img"
           className="rightbar__promotion-img"
         />
         <p className="rightbar__promotion-text">Shopping</p>
         <img
-          src="../../../public/assets/promotion/promotion2.jpeg"
+          src={`${PUBLIC_FOLDER}/promotion/promotion2.jpeg`}
           alt="img"
           className="rightbar__promotion-img"
         />
         <p className="rightbar__promotion-text">Automobile</p>
         <img
-          src="../../../public/assets/promotion/promotion3.jpeg"
+          src={`${PUBLIC_FOLDER}/promotion/promotion3.jpeg`}
           alt="img"
           className="rightbar__promotion-img"
         />

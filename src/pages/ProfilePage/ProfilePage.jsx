@@ -12,7 +12,7 @@ import RightBar from "../../components/RightBar/RightBar";
 import "./ProfilePage.scss";
 
 function ProfilePage() {
-  const PUBLIC_FOLDER = import.meta.env.VITE_APP_PUBLIC_FOLDER;
+  const PUBLIC_FOLDER = import.meta.env.VITE_SERVER_PUBLIC_FOLDER;
   const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
   const [user, setUser] = useState({});

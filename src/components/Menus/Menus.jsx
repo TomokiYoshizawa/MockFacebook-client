@@ -1,7 +1,10 @@
-import Home from "@mui/icons-material/Home";
+/* eslint-disable no-unused-vars */
+import { React, useContext } from "react";
 
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../state/AuthContext";
 
+import Home from "@mui/icons-material/Home";
 import Search from "@mui/icons-material/Search";
 import Notification from "@mui/icons-material/Notifications";
 import MessageRounded from "@mui/icons-material/MessageRounded";
@@ -11,6 +14,8 @@ import Settings from "@mui/icons-material/Settings";
 
 import "./Menus.scss";
 function Menus() {
+  const { user } = useContext(AuthContext);
+
   return (
     <div className="menu">
       <div className="menu__wrapper">
@@ -39,7 +44,7 @@ function Menus() {
           </li>
           <li className="menu__item">
             <Person className="menu__icon" />
-            <Link to="/profile/username" className="menu__link">
+            <Link to={`/profile/${user.username}`} className="menu__link">
               <span className="menu__text">Profile</span>
             </Link>
           </li>

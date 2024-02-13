@@ -1,39 +1,44 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import { React, useState, useEffect, useContext } from "react";
+import { AuthContext } from "../../state/AuthContext";
+
 import axios from "axios";
 import { format } from "timeago.js";
 import { Link } from "react-router-dom";
 
 import MoreVert from "@mui/icons-material/MoreVert";
 
-// import { Users } from "../../dummyData";
-
 import "./Post.scss";
 
 function Post({ post }) {
-  const PUBLIC_FOLDER = import.meta.env.VITE_APP_PUBLIC_FOLDER;
+  const PUBLIC_FOLDER = import.meta.env.VITE_SERVER_PUBLIC_FOLDER;
   const SERVER_URL = import.meta.env.VITE_SERVER_URL;
-  // console.log(post);
-  // console.log(SERVER_URL);
+
   const [like, setLike] = useState(post.likes.length);
   const [isLiked, setIsLiked] = useState(false);
   const [user, setUser] = useState({});
-
-  // console.log(user);
+  const { user: currentUser } = useContext(AuthContext);
 
   useEffect(() => {
     const getUser = async () => {
       const response = await axios.get(
         `${SERVER_URL}/users?userId=${post.userId}`
       );
-      console.log(response);
+
       setUser(response.data);
     };
     getUser();
   }, [post.userId, SERVER_URL]);
 
-  const handleLike = () => {
+  const handleLike = async () => {
+    try {
+      axios.put(`${SERVER_URL}/posts/${post._id}/like`, {
+        userId: currentUser._id,
+      });
+    } catch (err) {
+      console.log(err);
+    }
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
   };
