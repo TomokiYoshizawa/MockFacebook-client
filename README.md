@@ -5,6 +5,7 @@
 email: tomoki@gmail.com<br>
 password: 123456
 </p>
+<p>right now you can use Home and Profile tag on your left of your home page!</p>
 
 <h2>🧐 Features</h2>
 
