@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import { React, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import "./RegisterPage.scss";
 import axios from "axios";
@@ -85,9 +85,11 @@ function RegisterPage() {
             <button type="submit" className="register__btn">
               Sign Up
             </button>
-            <button className="register__btn register__btn-register">
-              Login
-            </button>
+            <Link to="/login" className="register__link">
+              <button className="register__btn register__btn-register">
+                Login
+              </button>
+            </Link>
           </form>
         </div>
       </div>
