@@ -1,5 +1,5 @@
 import axios from "axios";
-const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+const SERVER_URL = import.meta.env.VITE_SERVER_URL.replace(/\/+$/, "");
 
 export const loginCall = async (user, dispatch) => {
   dispatch({ type: "LOGIN_START" });
