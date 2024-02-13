@@ -13,6 +13,7 @@ Here're some of the project's best features:
 - Login function
 - Registering new user
 - posting a comment and display it on your timeline
+- Upload the jepg, jpg, png, images
 - like/unlike someones's comments you have followed
 
 <h2>🛠️ Installation Steps:</h2>
