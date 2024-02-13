@@ -1,6 +1,10 @@
 <h1 align="center" id="title">Mock Facebook</h1>
 
 <p id="description">Thank you for exploring this application! This is a full-stack mock Facebook web application developed from scratch. It includes basic functionalities found in other social media platforms such as login/register posting comments and like/unlike features. All actions are stored in MongoDB ensuring data persistence and integrity Follow and Unfollow function will be continued to implement</p>
+<p> for easy login to this application, please use following email and password. <br>
+email: tomoki@gmail.com<br>
+password: 123456
+</p>
 
 <h2>🧐 Features</h2>
 
