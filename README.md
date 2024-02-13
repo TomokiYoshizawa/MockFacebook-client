@@ -1,64 +1,31 @@
-Project Name
-Outline a brief description of your project. Live demo here.
+<h1 align="center" id="title">Mock Facebook</h1>
 
-Table of Contents
-General Info
-Technologies Used
-Features
-Screenshots
-Setup
-Usage
-Project Status
-Room for Improvement
-Acknowledgements
-Contact
-General Information
-Provide general information about your project here.
-What problem does it (intend to) solve?
-What is the purpose of your project?
-Why did you undertake it?
-Technologies Used
-Tech 1 - version 1.0
-Tech 2 - version 2.0
-Tech 3 - version 3.0
-Features
-List the ready features here:
+<p id="description">Thank you for exploring this application! This is a full-stack mock Facebook web application developed from scratch. It includes basic functionalities found in other social media platforms such as login/register posting comments and like/unlike features. All actions are stored in MongoDB ensuring data persistence and integrity Follow and Unfollow function will be continued to implement</p>
 
-Awesome feature 1
-Awesome feature 2
-Awesome feature 3
-Screenshots
-Example screenshot
+<h2>🧐 Features</h2>
 
-Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+Here're some of the project's best features:
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+- Login function
+- Registering new user
+- posting a comment and display it on your timeline
+- like/unlike someones's comments you have followed
 
-Usage
-How does one go about using it? Provide various use cases and code examples here.
+<h2>🛠️ Installation Steps:</h2>
 
-write-your-code-here
+<p>1. npm install</p>
 
-Project Status
-Project is: in progress / complete / no longer being worked on. If you are no longer working on it, provide reasons why.
+<p>2. npm run dev</p>
 
-Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
+<h2>💻 Built with</h2>
 
-Room for improvement:
+Technologies used in the project:
 
-Improvement to be done 1
-Improvement to be done 2
-To do:
-
-Feature to be added 1
-Feature to be added 2
-Acknowledgements
-Give credit here.
-
-This project was inspired by...
-This project was based on this tutorial.
-Many thanks to...
-Contact
-Created by @flynerdpl - feel free to contact me!
+- mongo DB
+- React.js
+- Node.js
+- Saas
+- Express
+- Mongoose
+<h2>Contact</h2>
+Created by @tomokiyoshizawa - feel free to contact me!
